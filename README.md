@@ -11,10 +11,10 @@ Available in the screenshots folder for both desktop and mobile.
 
 ## Why Xamarin
 
-1. it is fully mobile
-2. support Android, IOS and UWP
+1. fully mobile
+2. supports Android, IOS and UWP
 3. has a large community for support 
-4. ideal for asp.net developers
+4. ideal for .net developers
 
 ## Run Locally
 
