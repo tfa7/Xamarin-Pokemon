@@ -29,9 +29,10 @@ To run this project locally:
 
 ### Working
 1. splash screen 
-2. retrieving and displaying the list of Pokemons
-3. clicking on a Pokemon displays the Pokemon item details
-4. filtering the Pokemon list (by text search)
+2. retrieving and displaying the list of Pokemons 
+3. filtering the list of Pokemons by text search
+4. clicking on a Pokemon displays the Pokemon item details
+5. adding or removing favourite Pokemon using cache
 
 ### Not Working
 1. Filter by type
