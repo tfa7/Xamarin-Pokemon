@@ -31,15 +31,15 @@ To run this project locally:
 1. splash screen 
 2. retrieving and displaying the list of Pokemons 
 3. filtering the list of Pokemons by text search
-4. clicking on a Pokemon displays the Pokemon item details
-5. adding or removing favourite Pokemon using cache
+4. clicking on a Pokemon displays the selected Pokemon
+5. save or remove favourite Pokemons by using cache
 
 ### Not Working
 1. Filter by type
 2. Navigation
 3. Caching and saving to SQLite
 
-Because the Angular project was completed first I did not have enough time to complete this. The reason the Angular project was completed first is because I was sure I had enough time and experience to get all the functionality completed in Angular.
+I did not have enough time to complete this project because the Angular project was completed first. The reason the Angular project was completed first is because I was sure I had enough time and experience to get all the functionality completed in Angular.
 
 ## Development Details
 
@@ -50,12 +50,12 @@ Because the Angular project was completed first I did not have enough time to co
 
 ### Model and Service Folder
 1. Entity: contains the main Pokemon model classes
-2. Service: calls the Pokemon Api and deserialises the JSON data to the models
+2. Service: calls the Pokemon Api and deserialises the JSON data to the model classes
 
 ### Resources Folder
 1. Contains a list of images for each Pokemon. A 'hack' was implemented for the 'Resources\drawable' folder to name the image "pokemon_XXX.png" where XXX maps the Pokemon name.
 
-AndroidExtenstions->CustomImageAdapter is where the images are mapped. When an image is not found the image could be got using the method "GetImageBitmapFromUrl" and saved to the local folder using the "pokemon_XXX.png" format.
+AndroidExtenstions->CustomImageAdapter is where the images are mapped. Ideally when an image is not found the image could be got using the method "GetImageBitmapFromUrl" and saved to the local folder using the "pokemon_XXX.png" format. Each time a new image is found it could be save.
 
 ### Utilities Folder
 1. List of constants variables  
@@ -67,7 +67,7 @@ The setup is there but the project is not using this at the moment
 Create a blank new template in Visual Studio using the latest Xamarin tools/packages to make sure the project works on all platforms.
 
 ## Template
-Due to time constraints this project used <a href="https://github.com/mdcruz/pokedex" target="_blank">https://github.com/mdcruz/pokedex</a> as a template. 
+Due to time constraints this project used <a href="https://github.com/mdcruz/pokedex" target="_blank">https://github.com/mdcruz/pokedex</a> as a template. I updated this project to use PokeApi v2, tailored the screens and data to match project requirements. 
 
 ## Testing
 No tests were created for this project.
