@@ -6,6 +6,7 @@ using PokemonApp.Presenter.Interface;
 using PokemonApp.Utilities;
 using PokemonApp.Views;
 using System.Linq;
+using AndroidX.Preference;
 
 namespace PokemonApp.Activities
 {
@@ -20,6 +21,7 @@ namespace PokemonApp.Activities
         private TextView PokemonWeight { get; set; }
         private TextView PokemonType { get; set; }
         private ImageView PokemonItemImage { get; set; }
+        private CheckBox PokemonItemFavourite { get; set; }
 
         #endregion
 
@@ -46,6 +48,9 @@ namespace PokemonApp.Activities
             PokemonWeight.Text = $"{Intent.GetStringExtra(Constants.pokemonWeight)} kg";
             PokemonType.Text = Intent.GetStringArrayListExtra(Constants.pokemonType).JoinList().ToLower().ToTitleCase();
             PokemonItemImage.SetImageResource(GetPokemonImageResource(Constants.pokemonIcon));
+
+            var preferences = PreferenceManager.GetDefaultSharedPreferences(this);
+            PokemonItemFavourite.Checked = preferences.GetBoolean(PokemonId.Text, false);
         }
 
         public int GetPokemonImageResource(string intentKey)
@@ -72,6 +77,25 @@ namespace PokemonApp.Activities
             PokemonWeight = FindViewById<TextView>(Resource.Id.pokemon_weight);
             PokemonType = FindViewById<TextView>(Resource.Id.pokemon_type);
             PokemonItemImage = FindViewById<ImageView>(Resource.Id.pokemon_item_image);
+
+            PokemonItemFavourite = FindViewById<CheckBox>(Resource.Id.pokemon_favourite);
+            PokemonItemFavourite.Click += (o, e) => {
+                var preferences = PreferenceManager.GetDefaultSharedPreferences(this);
+                var editor = preferences.Edit();
+
+                if (PokemonItemFavourite.Checked)
+                {
+                    editor.PutBoolean(PokemonId.Text, true);
+                    Toast.MakeText(this, "Saved as favourite", ToastLength.Short).Show();
+                }
+                else
+                {
+                    editor.Remove(PokemonId.Text);
+                    Toast.MakeText(this, "Removed as favourite", ToastLength.Short).Show();
+                }
+
+                editor.Apply();
+            };
         }
     }
 }
