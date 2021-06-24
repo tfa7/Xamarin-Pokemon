@@ -5,7 +5,7 @@ This is a sample android mobile application using pokeapi (https://pokeapi.co/) 
 ## Requirments
 Get a Xamarin application connecting to <a href="https://pokeapi.co/" target="_blank">Poke Api</a>
 
-The fully working Angualr version of this project is available <a href="https://github.com/tfa7/Angular-Pokemon" target="_blank">https://github.com/tfa7/Angular-Pokemon</a>
+A working Angualar version of this project is available <a href="https://github.com/tfa7/Angular-Pokemon" target="_blank">https://github.com/tfa7/Angular-Pokemon</a>
 
 ## Screenshots
 
@@ -28,17 +28,16 @@ To run this project locally:
 ## Project Details
 
 ### Working
-1. Retreiving and displaying the list of Pokemons
-2. Clicking on a Pokemon displays the Pokemon detail
-3. Filter Pokemon by text search
-4. Added Favourite checkbox to the Pokemon detail page
+1. retreiving and displaying the list of Pokemons
+2. clicking on a Pokemon displays the requested Pokemon detail
+3. filtering Pokemon by text search works
 
 ### Not Working
 1. Filter by type
 2. Caching and saving to Sqlite
 3. Navigation
 
-Because the Angular project was completed first I did not have enough time to complete this. The reason the Angular project was completed first is that I was sure I had enough time and experience to get all the functionality completed in Angular.
+Because the Angular project was completed first I did not have enough time to complete this. The reason the Angular project was completed first is because I was sure I had enough time and experience to get all the functionality completed in Angular.
 
 ## Development Details
 
