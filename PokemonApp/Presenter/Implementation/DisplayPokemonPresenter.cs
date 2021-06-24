@@ -12,7 +12,7 @@ namespace PokemonApp.Presenter.Implementation
     {
         private IDisplayPokemonView _displayPokemonView;
         private PokemonService _pokemonService;
-        private List<Pokemon> _pokemons;
+        private IList<Pokemon> _pokemons;
 
         public DisplayPokemonPresenter(IDisplayPokemonView displayPokemonView)
         {
@@ -28,7 +28,7 @@ namespace PokemonApp.Presenter.Implementation
             _displayPokemonView.SetImageAdapter();
         }
 
-        public List<Pokemon> GetPokemons()
+        public IList<Pokemon> GetPokemons()
         {
             return _pokemons;
         }

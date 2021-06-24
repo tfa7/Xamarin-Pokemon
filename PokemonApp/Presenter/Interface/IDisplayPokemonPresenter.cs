@@ -6,7 +6,7 @@ namespace PokemonApp.Presenter.Interface
     public interface IDisplayPokemonPresenter
     {
         void FillGridWithPokemon();
-        List<Pokemon> GetPokemons();
+        IList<Pokemon> GetPokemons();
         void SetPokemonDetails(Pokemon selectedPokemon);
     }
 }

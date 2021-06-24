@@ -11,11 +11,11 @@ namespace PokemonApp.AndroidExtensions
     public class CustomImageAdapter : ArrayAdapter<Pokemon>, IFilterable
     {
         private Activity _activity;
-        public List<Pokemon> _pokemonItems;
-        public List<Pokemon> _pokemons;
+        public IList<Pokemon> _pokemonItems;
+        public IList<Pokemon> _pokemons;
         private int _resourceLayoutId;
 
-        public CustomImageAdapter(Activity activity, int resourceLayoutId, List<Pokemon> pokemons)
+        public CustomImageAdapter(Activity activity, int resourceLayoutId, IList<Pokemon> pokemons)
             : base(activity, resourceLayoutId, pokemons)
         {
             _activity = activity;

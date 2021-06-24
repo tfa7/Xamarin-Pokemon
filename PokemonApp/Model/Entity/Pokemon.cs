@@ -8,7 +8,7 @@ namespace PokemonApp.Model.Entity
         public string Next { get; set; }
         public string Previous { get; set; }
 
-        public IList<Pokemon> Results { get; set; }
+        public IEnumerable<Pokemon> Results { get; set; }
     }
 
     public class Pokemon
@@ -25,7 +25,7 @@ namespace PokemonApp.Model.Entity
         public int Id { get; set; }
         public string Height { get; set; }
         public string Weight { get; set; }
-        public IList<PokemonType> Types { get; set; }
+        public IEnumerable<PokemonType> Types { get; set; }
         public PokemonSprite Sprites { get; set; }
         public string Image_Resource { get; set; }
     }

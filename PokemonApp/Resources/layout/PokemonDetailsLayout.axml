@@ -28,7 +28,7 @@
         android:contentDescription="" />
      <TextView
         android:text="Id:"
-        android:textSize="24dp"
+        android:textSize="20dp"
         android:id="@+id/pokemon_id_label"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
@@ -40,7 +40,7 @@
         android:layout_below="@id/pokemon_item_name" />
     <TextView
         android:text="1"
-        android:textSize="24dp"
+        android:textSize="20dp"
         android:id="@+id/pokemon_id"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="100dp"
@@ -52,7 +52,7 @@
         android:layout_below="@id/pokemon_item_name" />
     <TextView
         android:text="Type:"
-        android:textSize="24dp"
+        android:textSize="20dp"
         android:id="@+id/pokemon_type_label"
         android:layout_marginTop="60dp"
         android:layout_marginLeft="20dp"
@@ -64,7 +64,7 @@
         android:layout_below="@id/pokemon_item_name" />
     <TextView
         android:text="Grass"
-        android:textSize="24dp"
+        android:textSize="20dp"
         android:id="@+id/pokemon_type"
         android:layout_marginTop="60dp"
         android:layout_marginLeft="100dp"
@@ -76,7 +76,7 @@
         android:layout_below="@id/pokemon_item_name" />  
     <TextView
         android:text="Height:"
-        android:textSize="24dp"
+        android:textSize="20dp"
         android:id="@+id/pokemon_height_label"
         android:layout_marginTop="110dp"
         android:layout_marginLeft="20dp"
@@ -88,7 +88,7 @@
         android:layout_below="@id/pokemon_item_name" />
     <TextView
         android:text="1.9 m"
-        android:textSize="24dp"
+        android:textSize="20dp"
         android:id="@+id/pokemon_height"
         android:layout_marginTop="110dp"
         android:layout_marginLeft="100dp"
@@ -100,7 +100,7 @@
         android:layout_below="@id/pokemon_item_name" />
     <TextView
         android:text="Weight:"
-        android:textSize="24dp"
+        android:textSize="20dp"
         android:id="@+id/pokemon_weight_label"
         android:layout_marginTop="160dp"
         android:layout_marginLeft="20dp"
@@ -112,7 +112,7 @@
         android:layout_below="@id/pokemon_item_name" />
     <TextView
         android:text="6.9 kg"
-        android:textSize="24dp"
+        android:textSize="20dp"
         android:id="@+id/pokemon_weight"
         android:layout_marginTop="160dp"
         android:layout_marginLeft="100dp"
@@ -123,7 +123,7 @@
         android:textColor="#424242"
         android:layout_below="@id/pokemon_item_name" />
     <CheckBox android:id="@+id/checkbox"
-        android:textSize="24dp"
+        android:textSize="20dp"
         android:layout_marginTop="210dp"
         android:layout_marginLeft="10dp"
         android:layout_width="wrap_content"

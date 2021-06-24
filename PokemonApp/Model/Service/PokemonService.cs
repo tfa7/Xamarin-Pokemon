@@ -3,6 +3,7 @@ using PokemonApp.Model.Database;
 using PokemonApp.Model.Entity;
 using PokemonApp.Utilities;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -10,14 +11,14 @@ namespace PokemonApp.Model.Service
 {
     public class PokemonService
     {
-        private PokemonQueries _pokemonQueries;
+        //private PokemonQueries _pokemonQueries;
 
         public PokemonService()
         {
-            _pokemonQueries = new PokemonQueries();
+           // _pokemonQueries = new PokemonQueries();
         }
 
-        public async Task<List<Pokemon>> GetPokemons()
+        public async Task<IList<Pokemon>> GetPokemons()
         {
             //var pokemonModelList = new List<Pokemon>();
 
@@ -40,11 +41,8 @@ namespace PokemonApp.Model.Service
             return pokemonModelList;
         }
 
-        private async Task<List<Pokemon>> GetPokemonsFromService()
+        private async Task<IList<Pokemon>> GetPokemonsFromService()
         {
-            var pokemonModelList = new List<Pokemon>();
-            PokemonDetail pokemonModel = null;
-
             var pokemonList = await GetPokemonSummaryInfo(); //await _pokemonQueries.GetPokemons();
 
             foreach (var pokemon in pokemonList)
@@ -56,7 +54,7 @@ namespace PokemonApp.Model.Service
                     if (response.IsSuccessStatusCode)
                     {
                         var content = await response.Content.ReadAsStringAsync();
-                        pokemonModel = JsonConvert.DeserializeObject<PokemonDetail>(content);
+                        var pokemonModel = JsonConvert.DeserializeObject<PokemonDetail>(content);
                         pokemon.Details = pokemonModel;
 
                         // for the moment images are presaved in Resources/drawable folder
@@ -68,7 +66,7 @@ namespace PokemonApp.Model.Service
             return pokemonList;
         }
 
-        private async Task<List<Pokemon>> GetPokemonSummaryInfo(int pageNo = 0)
+        private async Task<IList<Pokemon>> GetPokemonSummaryInfo(int pageNo = 0)
         {
             var pokemonModelList = new List<Pokemon>();
 
@@ -81,7 +79,7 @@ namespace PokemonApp.Model.Service
                 {
                     var content = await response.Content.ReadAsStringAsync();
                     var item = JsonConvert.DeserializeObject<PokemonApi>(content);
-                    pokemonModelList = item.Results as List<Pokemon>;
+                    pokemonModelList = item.Results.ToList();
                 }
             }
 

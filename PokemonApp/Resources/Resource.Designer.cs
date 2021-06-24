@@ -25,7 +25,6 @@ namespace PokemonApp
 		
 		public static void UpdateIdValues()
 		{
-			global::Splat.Resource.String.library_name = global::PokemonApp.Resource.String.library_name;
 		}
 		
 		public partial class Attribute
@@ -320,9 +319,6 @@ namespace PokemonApp
 		
 		public partial class String
 		{
-			
-			// aapt resource value: 0x7F050002
-			public const int library_name = 2131034114;
 			
 			// aapt resource value: 0x7F050000
 			public const int LoadingMessage = 2131034112;
