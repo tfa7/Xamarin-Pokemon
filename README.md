@@ -28,9 +28,10 @@ To run this project locally:
 ## Project Details
 
 ### Working
-1. retreiving and displaying the list of Pokemons
-2. clicking on a Pokemon displays the requested Pokemon detail
-3. filtering Pokemon by text search works
+1. splash screen 
+2. retreiving and displaying the list of Pokemons
+3. clicking on a Pokemon displays the requested Pokemon detail
+4. filtering Pokemon by text search works
 
 ### Not Working
 1. Filter by type
