@@ -5,7 +5,7 @@ This is a sample android mobile application using pokeapi (https://pokeapi.co/) 
 ## Requirments
 Get a Xamarin application connecting to <a href="https://pokeapi.co/" target="_blank">Poke Api</a>
 
-A working Angualar version of this project is available <a href="https://github.com/tfa7/Angular-Pokemon" target="_blank">https://github.com/tfa7/Angular-Pokemon</a>
+A working Angular version of this project is available <a href="https://github.com/tfa7/Angular-Pokemon" target="_blank">https://github.com/tfa7/Angular-Pokemon</a>
 
 ## Screenshots
 
@@ -29,13 +29,13 @@ To run this project locally:
 
 ### Working
 1. splash screen 
-2. retreiving and displaying the list of Pokemons
+2. retrieving and displaying the list of Pokemons
 3. clicking on a Pokemon displays the requested Pokemon detail
 4. filtering Pokemon by text search works
 
 ### Not Working
 1. Filter by type
-2. Caching and saving to Sqlite
+2. Caching and saving to SQLite
 3. Navigation
 
 Because the Angular project was completed first I did not have enough time to complete this. The reason the Angular project was completed first is because I was sure I had enough time and experience to get all the functionality completed in Angular.
@@ -49,17 +49,17 @@ Because the Angular project was completed first I did not have enough time to co
 
 ### Model and Service Folder
 1. Entity: contains the main Pokemon model class
-2. Service: calls the Pokemon Api and deserialises the data to the models
+2. Service: calls the Pokemon Api and deserialises the JSON data to the models
 
 ### Resources Folder
 1. Contains a list of images for each Pokemon. A hack was implemented for the 'Resources\drawable' folder to name the image "pokemon_XXX.png" where XXX maps the Pokemon name.
 
-Note: AndroidExtenstions->CustomImageAdapter is where the images are mapped. When an image is not found the image could be got using "GetImageBitmapFromUrl" and saved to the local folder folder using the "pokemon_XXX.png" format.
+AndroidExtenstions->CustomImageAdapter is where the images are mapped. When an image is not found the image could be got using "GetImageBitmapFromUrl" and saved to the local folder using the "pokemon_XXX.png" format.
 
 ### Utilities Folder
 1. List of constants variables  
 
-### Sqlite 
+### SQLite 
 The setup is there but the project is not using this at the moment
 
 ## Testing
