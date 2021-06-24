@@ -5,9 +5,11 @@ This is a sample android mobile application using pokeapi (https://pokeapi.co/) 
 ## Requirments
 Get a Xamarin application connecting to <a href="https://pokeapi.co/" target="_blank">Poke Api</a>
 
+The fully working Angualr version of this project is available <a href="https://github.com/tfa7/Angular-Pokemon" target="_blank">https://github.com/tfa7/Angular-Pokemon</a>
+
 ## Screenshots
 
-Available in the screenshots folder for both desktop and mobile.
+Available in the screenshots folder
 
 ## Why Xamarin
 
@@ -19,46 +21,52 @@ Available in the screenshots folder for both desktop and mobile.
 ## Run Locally
 
 To run this project locally:
-1. download the entire repo
+1. download the repo
 2. build the project in visual studio 
 3. run the application 
 
 ## Project Details
 
-This project was generated with <a href="https://github.com/angular/angular-cli" target="_blank">Angular CLI</a> version 8.0.0.
+### Working
+1. Retreiving and displaying the list of Pokemons
+2. Clicking on a Pokemon displays the Pokemon detail
+3. Filter Pokemon by text search
+4. Added Favourite checkbox to the Pokemon detail page
 
-This project uses <a href="https://material.angular.io/" target="_blank">Angular-Material</a> and <a href="https://github.com/angular/flex-layout#readme" target="_blank">Angular Flex Layout</a>
+### Not Working
+1. Filter by type
+2. Caching and saving to Sqlite
+3. Navigation
+
+Because the Angular project was completed first I did not have enough time to complete this. The reason the Angular project was completed first is that I was sure I had enough time and experience to get all the functionality completed in Angular.
 
 ## Development Details
 
-### This project consists of 3 main components (in the components folder) 
-1. pokemon-header: contains the mat-toolbar used for filtering
-2. pokemon-detail: displays the Pokemon cards
-3. pokemon-detail-modal: displays the selected Pokemon
+### Activities, Presenter and Layout Folders
+1. HomeActivity: splash screen titled "Pokemon Demo App" -> "Presenter/HomePresenter" -> "Resources/layout/HomeScreenLayout"
+2. DisplayPokemonActivity: displays the grid list of Pokemons -> "Presenter/DisplayPokemonPresenter" -> "Resources/layout/ViewPokemonLayout" & "Resources/layout/GridViewLayout"
+3. PokemonDetailsActivity: displays the Pokemon item -> "Presenter/PokemonDetailsPresenter" -> "Resources/layout/PokemonDetailsLayout"
 
-We could keep the header and detail on one page but adhering to separation of concerns and single responsibility principle, both were placed in separate components. This makes it easier to manage and test these components. The observer behavioral design pattern ensures the respective components are in sync by allowing components to subscribe to the 'PokemonFilterService'.
+### Model and Service Folder
+1. Entity: contains the main Pokemon model class
+2. Service: calls the Pokemon Api and deserialises the data to the models
 
-### The services folder contains the following
-1. api: contains the api calls to Poke Api plus, a resolver service that caches the pokemon types from the api call
-2. behaviour-services: used to keep track of the Pokemon filters, and to sync this data between the pokemon-header and pokemon-detail components
-3. guards: currently only used for changing the page title but these are more commonly used for security
+### Resources Folder
+1. Contains a list of images for each Pokemon. A hack was implemented for the 'Resources\drawable' folder to name the image "pokemon_XXX.png" where XXX maps the Pokemon name.
 
+Note: AndroidExtenstions->CustomImageAdapter is where the images are mapped. When an image is not found the image could be got using "GetImageBitmapFromUrl" and saved to the local folder folder using the "pokemon_XXX.png" format.
 
-### The pipes folder contains the filters for 
-1. search text 
-2. types
+### Utilities Folder
+1. List of constants variables  
 
-Pipes allow code to be reused
-
-### The data-models contains 
-1. the models to match the api requests
-
-### The styles folders contains 
-Several scss pages that are imported in to the main "styles.scss" file
-1. custom.scss: global css styling
-2. loading-ball.scss: a nice UI/UX component, displaed when waiting for an api response
-3. material-custom.scss: changes to angular materialbase styling. This is usefuly if one decides to upgrade the project.
-4. var.scss: colour variables for the global core theme styling
+### Sqlite 
+The setup is there but the project is not using this at the moment
 
 ## Testing
 No tests were created for this project.
+
+## Hindsight
+Create a blank new template in Visual Studio using the latest Xamarin tools/packages.
+
+## Template
+Due to time constraints this project used <a href="https://github.com/mdcruz/pokedex" target="_blank">https://github.com/mdcruz/pokedex</a> as a template. 
