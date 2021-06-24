@@ -30,31 +30,31 @@ To run this project locally:
 ### Working
 1. splash screen 
 2. retrieving and displaying the list of Pokemons
-3. clicking on a Pokemon displays the requested Pokemon detail
-4. filtering Pokemon by text search works
+3. clicking on a Pokemon displays the Pokemon item details
+4. filtering the Pokemon list (by text search)
 
 ### Not Working
 1. Filter by type
-2. Caching and saving to SQLite
-3. Navigation
+2. Navigation
+3. Caching and saving to SQLite
 
 Because the Angular project was completed first I did not have enough time to complete this. The reason the Angular project was completed first is because I was sure I had enough time and experience to get all the functionality completed in Angular.
 
 ## Development Details
 
-### Activities, Presenter and Layout Folders
+### Linking of Activities -> Presenter -> Layout
 1. HomeActivity: splash screen titled "Pokemon Demo App" -> "Presenter/HomePresenter" -> "Resources/layout/HomeScreenLayout"
-2. DisplayPokemonActivity: displays the grid list of Pokemons -> "Presenter/DisplayPokemonPresenter" -> "Resources/layout/ViewPokemonLayout" & "Resources/layout/GridViewLayout"
-3. PokemonDetailsActivity: displays the Pokemon item -> "Presenter/PokemonDetailsPresenter" -> "Resources/layout/PokemonDetailsLayout"
+2. DisplayPokemonActivity: displays the grid list of Pokemons titled "Pokemon List" -> "Presenter/DisplayPokemonPresenter" -> "Resources/layout/ViewPokemonLayout" & "Resources/layout/GridViewLayout"
+3. PokemonDetailsActivity: displays the Pokemon item titled "Pokemon Details" -> "Presenter/PokemonDetailsPresenter" -> "Resources/layout/PokemonDetailsLayout"
 
 ### Model and Service Folder
-1. Entity: contains the main Pokemon model class
+1. Entity: contains the main Pokemon model classes
 2. Service: calls the Pokemon Api and deserialises the JSON data to the models
 
 ### Resources Folder
-1. Contains a list of images for each Pokemon. A hack was implemented for the 'Resources\drawable' folder to name the image "pokemon_XXX.png" where XXX maps the Pokemon name.
+1. Contains a list of images for each Pokemon. A 'hack' was implemented for the 'Resources\drawable' folder to name the image "pokemon_XXX.png" where XXX maps the Pokemon name.
 
-AndroidExtenstions->CustomImageAdapter is where the images are mapped. When an image is not found the image could be got using "GetImageBitmapFromUrl" and saved to the local folder using the "pokemon_XXX.png" format.
+AndroidExtenstions->CustomImageAdapter is where the images are mapped. When an image is not found the image could be got using the method "GetImageBitmapFromUrl" and saved to the local folder using the "pokemon_XXX.png" format.
 
 ### Utilities Folder
 1. List of constants variables  
@@ -62,11 +62,11 @@ AndroidExtenstions->CustomImageAdapter is where the images are mapped. When an i
 ### SQLite 
 The setup is there but the project is not using this at the moment
 
-## Testing
-No tests were created for this project.
-
 ## Hindsight
-Create a blank new template in Visual Studio using the latest Xamarin tools/packages.
+Create a blank new template in Visual Studio using the latest Xamarin tools/packages to make sure the project works on all platforms.
 
 ## Template
 Due to time constraints this project used <a href="https://github.com/mdcruz/pokedex" target="_blank">https://github.com/mdcruz/pokedex</a> as a template. 
+
+## Testing
+No tests were created for this project.
